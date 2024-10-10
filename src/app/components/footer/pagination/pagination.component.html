@@ -1,0 +1,23 @@
+<div class="flex w-[300px] mt-4 justify-between">
+  <button
+    [disabled]="page > 1 ? false : true"
+    class="w-20 bg-blue-400 rounded-xl flex items-center justify-center"
+    (click)="previousPage()"
+  >
+    <ng-icon
+      name="heroArrowRightCircle"
+      size="20px"
+      color="black"
+      class="rotate-180"
+    />
+    Prev
+  </button>
+  <span>{{ page }} | {{count}} </span>
+  <button
+    class="w-20 bg-blue-400 rounded-xl flex items-center justify-center"
+    (click)="nextPage()"
+  >
+    Next
+    <ng-icon name="heroArrowRightCircle" size="20px" color="black" />
+  </button>
+</div>

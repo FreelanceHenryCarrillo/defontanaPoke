@@ -1,0 +1,24 @@
+<div class="w-[100vw] h-[99vh] overflow-hidden">
+  <app-header />
+  <div class="flex justify-between items-center w-full h-full">
+    <app-content class="w-full h-full" />
+
+    <div class="relative h-full">
+      <app-detail-cards class="h-[900px] relative overflow-y-auto" [isActiveSidebar]="isActiveSidebar"/>
+      <ng-icon
+        name="heroArrowLeft"
+        size="30px"
+        (click)="setActiveSideBar()"
+        [ngClass]="
+          isActiveSidebar
+            ? 'rotate-180 transition-transform duration-700 ease-in-out '
+            : 'rotate-0 transition-transform duration-700 ease-in-out '
+        "
+        class="absolute top-[40%] z-30 -left-10 cursor-pointer text-2xl bg-gray-400 rounded-full hover:scale-[1.1]"
+      ></ng-icon>
+    </div>
+  </div>
+</div>
+
+
+
